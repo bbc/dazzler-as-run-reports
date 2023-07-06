@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "as-run-reports"
+version = "0.1.0"
+description = ""
+authors = ["jcable <julian.cable@bbc.co.uk>"]
+readme = "README.md"
+packages = [{include = "as_run_reports"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+isoduration = "^20.11.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

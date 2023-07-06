@@ -1,0 +1,402 @@
+[
+    {
+        "@timestamp": "2023-06-09 00:21:18.000",
+        "@message": {
+            "action_name": "20230609T002118.087Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T00:21:18.093081",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 00:22:26.000",
+        "@message": {
+            "action_name": "20230609T002226.087Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T00:22:26.285051",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 00:24:00.000",
+        "@message": {
+            "action_name": "20230609T002400.087Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T00:24:00.641176",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 00:25:08.000",
+        "@message": {
+            "action_name": "20230609T002508.087Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T00:25:08.848668",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 00:26:43.000",
+        "@message": {
+            "action_name": "20230609T002643.333Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T00:26:43.348841",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 00:27:51.000",
+        "@message": {
+            "action_name": "20230609T002751.333Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T00:27:51.515659",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 00:29:25.000",
+        "@message": {
+            "action_name": "20230609T002925.333Z PT59M0.12S sched m0018lqc",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T00:29:25.326788",
+            "url_path": "s3://childrens-dazzler/media/m0018lqc.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 01:27:25.000",
+        "@message": {
+            "action_name": "20230609T012725.897Z PT1H58M31.04S sched m001mx88",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T01:27:25.896841",
+            "url_path": "s3://childrens-dazzler/media/m001mx88.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 03:25:56.000",
+        "@message": {
+            "action_name": "20230609T032556.937Z PT1M sched p01477xd",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T03:25:56.939526",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-4c51b41c-7aee-4f2c-a0eb-ed6d7b0a068e_p01477xd_cUnknown_1525946396995.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 03:26:57.000",
+        "@message": {
+            "action_name": "20230609T032657.482Z PT2H8M47.04S sched b07k42cx",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T03:26:57.484475",
+            "url_path": "s3://childrens-dazzler/media/b07k42cx.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 05:35:43.000",
+        "@message": {
+            "action_name": "20230609T053543.977Z PT2H5M54.04S sched b08wwnzy",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T05:35:43.980592",
+            "url_path": "s3://childrens-dazzler/media/b08wwnzy.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 07:41:38.000",
+        "@message": {
+            "action_name": "20230609T074138.017Z PT2H4M10.04S sched m0006hfj",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T07:41:38.033999",
+            "url_path": "s3://childrens-dazzler/media/m0006hfj.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 09:45:48.000",
+        "@message": {
+            "action_name": "20230609T094548.057Z PT1H58M31.04S sched m001mx88",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T09:45:48.073098",
+            "url_path": "s3://childrens-dazzler/media/m001mx88.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 10:59:59.000",
+        "@message": {
+            "action_name": "20230609T110000.000Z PT2H8M47.04S sched b07k42cx",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T10:59:59.992720",
+            "url_path": "s3://childrens-dazzler/media/b07k42cx.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 13:08:47.000",
+        "@message": {
+            "action_name": "20230609T130847.040Z PT2H5M54.04S sched b08wwnzy",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T13:08:47.028441",
+            "url_path": "s3://childrens-dazzler/media/b08wwnzy.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 15:14:41.000",
+        "@message": {
+            "action_name": "20230609T151441.080Z PT2H4M10.04S sched m0006hfj",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T15:14:41.167104",
+            "url_path": "s3://childrens-dazzler/media/m0006hfj.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 17:18:51.000",
+        "@message": {
+            "action_name": "20230609T171851.120Z PT1H58M31.04S sched m001mx88",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T17:18:51.099463",
+            "url_path": "s3://childrens-dazzler/media/m001mx88.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 19:17:22.000",
+        "@message": {
+            "action_name": "20230609T191722.160Z PT2H8M47.04S sched b07k42cx",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T19:17:22.141128",
+            "url_path": "s3://childrens-dazzler/media/b07k42cx.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 21:26:09.000",
+        "@message": {
+            "action_name": "20230609T212609.200Z PT2H5M54.04S sched b08wwnzy",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T21:26:09.179795",
+            "url_path": "s3://childrens-dazzler/media/b08wwnzy.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:32:03.000",
+        "@message": {
+            "action_name": "20230609T233203.240Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:32:03.209566",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:33:11.000",
+        "@message": {
+            "action_name": "20230609T233311.240Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:33:11.396839",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:34:45.000",
+        "@message": {
+            "action_name": "20230609T233445.240Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:34:45.754957",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:35:53.000",
+        "@message": {
+            "action_name": "20230609T233553.240Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:35:53.969492",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:37:31.000",
+        "@message": {
+            "action_name": "20230609T233731.648Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:37:31.675485",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:38:39.000",
+        "@message": {
+            "action_name": "20230609T233839.648Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:38:39.839394",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:40:14.000",
+        "@message": {
+            "action_name": "20230609T234013.648Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:40:14.217731",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:41:22.000",
+        "@message": {
+            "action_name": "20230609T234121.648Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:41:22.402720",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:42:56.000",
+        "@message": {
+            "action_name": "20230609T234256.922Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:42:56.915743",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:44:05.000",
+        "@message": {
+            "action_name": "20230609T234404.922Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:44:05.086978",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:45:39.000",
+        "@message": {
+            "action_name": "20230609T234538.922Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:45:39.442829",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:46:47.000",
+        "@message": {
+            "action_name": "20230609T234646.922Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:46:47.640782",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:48:22.000",
+        "@message": {
+            "action_name": "20230609T234822.232Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:48:22.237476",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:49:30.000",
+        "@message": {
+            "action_name": "20230609T234930.232Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:49:30.394182",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:51:04.000",
+        "@message": {
+            "action_name": "20230609T235104.232Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:51:04.757926",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:52:12.000",
+        "@message": {
+            "action_name": "20230609T235212.232Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:52:12.955329",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:53:47.000",
+        "@message": {
+            "action_name": "20230609T235347.471Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:53:47.481313",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:54:55.000",
+        "@message": {
+            "action_name": "20230609T235455.471Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:54:55.651618",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:56:29.000",
+        "@message": {
+            "action_name": "20230609T235629.471Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:56:29.997004",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:57:38.000",
+        "@message": {
+            "action_name": "20230609T235737.471Z PT1M34S loop p02bqgr0",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:57:38.213287",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-613260e0-298c-4664-b21d-dc1a887d5a65_p02bqgr0_1517339401258.mp4"
+        }
+    },
+    {
+        "@timestamp": "2023-06-09 23:59:12.000",
+        "@message": {
+            "action_name": "20230609T235912.704Z PT1M8S loop p023lkf6",
+            "as_run_type": "input_switch_initiated",
+            "input_id": "Glastonbury dynamic",
+            "timestamp": "2023-06-09T23:59:12.710645",
+            "url_path": "s3://livemodavdistributionresources-distributionbucket-182btg2y28f33/av_pv10_pa4/modav/bUnknown-71c01eb5-5409-45bf-b1d5-0c0cc08e7263_p023lkf6_1516302632428.mp4"
+        }
+    }
+]
