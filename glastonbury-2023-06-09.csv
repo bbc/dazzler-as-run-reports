@@ -1,41 +1,41 @@
-start,duration,vpid,episode pid,title,direction,delta
-00:21:18,PT1M8S,p023lkf6,,,,
-00:22:26,PT1M34S,p02bqgr0,p02bqgqv,,,
-00:24:01,PT1M8S,p023lkf6,,,late,0.554176
-00:25:09,PT1M34S,p02bqgr0,p02bqgqv,,late,0.761668
-00:26:43,PT1M8S,p023lkf6,,,,
-00:27:52,PT1M34S,p02bqgr0,p02bqgqv,,,
-00:29:25,PT59M0.12S,m0018lqc,m0018lqf,"Wet Leg, Robert Plant & Alison Krauss, Wolf Alice & TLC",,
-01:27:26,PT1H58M31.04S,m001mx88,b036nft9,Best of Glastonbury 2013,,
-03:25:57,PT1M,p01477xd,p01477xb,,,
-03:26:57,PT2H8M47.04S,b07k42cx,b07k42d0,Best of Glastonbury 2016,,
-05:35:44,PT2H5M54.04S,b08wwnzy,b08wwp0s,Best of Glastonbury 2017,,
-07:41:38,PT2H4M10.04S,m0006hfj,m0006hfk,Best of Glastonbury 2019,,
-09:45:48,PT1H58M31.04S,m001mx88,b036nft9,Best of Glastonbury 2013,,
-11:00:00,PT2H8M47.04S,b07k42cx,b07k42d0,Best of Glastonbury 2016,,
-13:08:47,PT2H5M54.04S,b08wwnzy,b08wwp0s,Best of Glastonbury 2017,,
-15:14:41,PT2H4M10.04S,m0006hfj,m0006hfk,Best of Glastonbury 2019,,
-17:18:51,PT1H58M31.04S,m001mx88,b036nft9,Best of Glastonbury 2013,,
-19:17:22,PT2H8M47.04S,b07k42cx,b07k42d0,Best of Glastonbury 2016,,
-21:26:09,PT2H5M54.04S,b08wwnzy,b08wwp0s,Best of Glastonbury 2017,,
-23:32:03,PT1M8S,p023lkf6,,,,
-23:33:11,PT1M34S,p02bqgr0,p02bqgqv,,,
-23:34:46,PT1M8S,p023lkf6,,,late,0.514957
-23:35:54,PT1M34S,p02bqgr0,p02bqgqv,,late,0.729492
-23:37:32,PT1M8S,p023lkf6,,,,
-23:38:40,PT1M34S,p02bqgr0,p02bqgqv,,,
-23:40:14,PT1M8S,p023lkf6,,,late,0.569731
-23:41:22,PT1M34S,p02bqgr0,p02bqgqv,,late,0.75472
-23:42:57,PT1M8S,p023lkf6,,,,
-23:44:05,PT1M34S,p02bqgr0,p02bqgqv,,,
-23:45:39,PT1M8S,p023lkf6,,,late,0.520829
-23:46:48,PT1M34S,p02bqgr0,p02bqgqv,,late,0.718782
-23:48:22,PT1M8S,p023lkf6,,,,
-23:49:30,PT1M34S,p02bqgr0,p02bqgqv,,,
-23:51:05,PT1M8S,p023lkf6,,,late,0.525926
-23:52:13,PT1M34S,p02bqgr0,p02bqgqv,,late,0.723329
-23:53:47,PT1M8S,p023lkf6,,,,
-23:54:56,PT1M34S,p02bqgr0,p02bqgqv,,,
-23:56:30,PT1M8S,p023lkf6,,,late,0.526004
-23:57:38,PT1M34S,p02bqgr0,p02bqgqv,,late,0.742287
-23:59:13,PT1M8S,p023lkf6,,,,
+type,start,duration,vpid,pid,title,direction,delta
+,00:21:18,PT1M8S,p023lkf6,,,,
+clip,00:22:26,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,,
+,00:24:01,PT1M8S,p023lkf6,,,late,0.554176
+clip,00:25:09,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,late,0.761668
+,00:26:43,PT1M8S,p023lkf6,,,,
+clip,00:27:52,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,,
+episode,00:29:25,PT59M0.12S,m0018lqc,m0018lqf,"Wet Leg, Robert Plant & Alison Krauss, Wolf Alice & TLC",,
+episode,01:27:26,PT1H58M31.04S,m001mx88,b036nft9,Best of Glastonbury 2013,,
+clip,03:25:57,PT1M,p01477xd,p01477xb,Telly on your telly,,
+episode,03:26:57,PT2H8M47.04S,b07k42cx,b07k42d0,Best of Glastonbury 2016,,
+episode,05:35:44,PT2H5M54.04S,b08wwnzy,b08wwp0s,Best of Glastonbury 2017,,
+episode,07:41:38,PT2H4M10.04S,m0006hfj,m0006hfk,Best of Glastonbury 2019,,
+episode,09:45:48,PT1H58M31.04S,m001mx88,b036nft9,Best of Glastonbury 2013,,
+episode,11:00:00,PT2H8M47.04S,b07k42cx,b07k42d0,Best of Glastonbury 2016,,
+episode,13:08:47,PT2H5M54.04S,b08wwnzy,b08wwp0s,Best of Glastonbury 2017,,
+episode,15:14:41,PT2H4M10.04S,m0006hfj,m0006hfk,Best of Glastonbury 2019,,
+episode,17:18:51,PT1H58M31.04S,m001mx88,b036nft9,Best of Glastonbury 2013,,
+episode,19:17:22,PT2H8M47.04S,b07k42cx,b07k42d0,Best of Glastonbury 2016,,
+episode,21:26:09,PT2H5M54.04S,b08wwnzy,b08wwp0s,Best of Glastonbury 2017,,
+,23:32:03,PT1M8S,p023lkf6,,,,
+clip,23:33:11,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,,
+,23:34:46,PT1M8S,p023lkf6,,,late,0.514957
+clip,23:35:54,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,late,0.729492
+,23:37:32,PT1M8S,p023lkf6,,,,
+clip,23:38:40,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,,
+,23:40:14,PT1M8S,p023lkf6,,,late,0.569731
+clip,23:41:22,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,late,0.75472
+,23:42:57,PT1M8S,p023lkf6,,,,
+clip,23:44:05,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,,
+,23:45:39,PT1M8S,p023lkf6,,,late,0.520829
+clip,23:46:48,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,late,0.718782
+,23:48:22,PT1M8S,p023lkf6,,,,
+clip,23:49:30,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,,
+,23:51:05,PT1M8S,p023lkf6,,,late,0.525926
+clip,23:52:13,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,late,0.723329
+,23:53:47,PT1M8S,p023lkf6,,,,
+clip,23:54:56,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,,
+,23:56:30,PT1M8S,p023lkf6,,,late,0.526004
+clip,23:57:38,PT1M34S,p02bqgr0,p02bqgqv,Get more out of BBC iPlayer,late,0.742287
+,23:59:13,PT1M8S,p023lkf6,,,,
