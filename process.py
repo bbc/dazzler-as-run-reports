@@ -39,7 +39,7 @@ def merge(day, sched, stats):
     stats = m.merge(stats.reset_index(), left_index=True, right_index=True)
     stats.index = stats['index_x']
     stats.index = stats.index.tz_localize(None)
-    return stats.drop(columns=['index_x','index_y', 'duration', 'start', 'end', 'delta', 'direction'])
+    return stats.drop(columns=['index_x','index_y', 'duration', 'start', 'delta', 'direction'])
 
 viewers = getSheet('iPlayer Streams Users - History Channel.xlsx')
 r=pd.date_range('2023-08-09','2023-08-16')

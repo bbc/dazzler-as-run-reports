@@ -60,7 +60,7 @@ def get_as_run(channelId, account, region, start, end):
             row['vpid'] = vpid
             row['duration'] = format_duration(duration)
             row['start'] = round_seconds(actual).strftime('%H:%M:%S')
-            row['end'] = round_seconds(actual+duration).strftime('%H:%M:%S')
+            # row['end'] = round_seconds(actual+duration).strftime('%H:%M:%S')
             delta = (actual - planned).total_seconds()
             if delta > 0.5:
                 row['direction'] = 'late'
