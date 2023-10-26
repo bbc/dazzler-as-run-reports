@@ -36,6 +36,7 @@ with pd.ExcelWriter(augmented) as writer:
     l = []
     for d in r:
         day = d.date().isoformat()
+        print(f'processing {day}')
         data = get_planned(bucket, sid, day)
         sched = pd.DataFrame.from_records(data, index='start')
         sched.index = pd.to_datetime(sched.index)
