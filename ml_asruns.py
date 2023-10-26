@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from isoduration import parse_duration, format_duration
 import boto3
 import time

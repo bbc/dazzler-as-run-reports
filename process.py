@@ -1,53 +1,50 @@
 import pandas as pd
+import numpy as np
+import sys
 from datetime import datetime, timedelta
-from piano_data import getSheet
-from data_from_nitro import resolve
 from ml_asruns import get_as_run
+from dazzler_schedule import get_planned
 
-channel = 'History_Channel'
-channelId = '7510516'
-region = 'eu-west-2'
-account = '739777694307'
-
-# ml = boto3.client('medialive', region_name='eu-west-2')
-# mlArn = [c for c in ml.list_channels()['Channels'] if channel in c['Name']][0]['Arn']
-
-def get_day(day):
+def get_day(channelId, account, region, day):
     t = datetime.fromisoformat(f'{day}T00:00:00+01:00')
     s = t - timedelta(hours=4)
     e = t + timedelta(hours=24)
-    report = get_as_run(channelId, account, region, s.isoformat(), e.isoformat())
-    print('got', len(report), 'as_run records')
-    nitrodata = {vpid: resolve(vpid) for vpid in set([r['vpid'] for r in report])}  
-    print('got', len(nitrodata), 'unique vpids')
-    for row in report:
-        entity = nitrodata[row['vpid']]
-        row['type'] = entity['item_type']
-        row['pid'] = entity['pid']
-        row['title'] = entity['title']
-    return report
+    return get_as_run(channelId, account, region, s.isoformat(), e.isoformat())
 
-def merge(day, sched, stats):
-    sched = pd.DataFrame.from_records(sched, 'timestamp').convert_dtypes()
-    sched.index = pd.to_datetime(sched.index)
+def addpids(audience_row, schedule):
+    s = audience_row['start']
+    e = audience_row['end']
+    pids = schedule.loc[s:e].copy().tz_convert('Europe/London')
+    pids['User ID'] = audience_row['User ID']
+    return pids.drop(['start', 'end'], axis=1)
 
-    e = (datetime.strptime(day, '%Y-%m-%d')+timedelta(hours=24)).strftime('%F')
-    asrun = sched.reindex(pd.date_range(day, e, freq='T', tz='Europe/London'), method='pad')
-
-    m = asrun.reset_index()
-
-    stats = m.merge(stats.reset_index(), left_index=True, right_index=True)
-    stats.index = stats['index_x']
-    stats.index = stats.index.tz_localize(None)
-    return stats.drop(columns=['index_x','index_y', 'duration', 'start', 'delta', 'direction'])
-
-viewers = getSheet('iPlayer Streams Users - History Channel.xlsx')
-r=pd.date_range('2023-08-09','2023-08-16')
-with pd.ExcelWriter("history.xlsx") as writer:
+audience_data = sys.argv[1]
+sid = sys.argv[2]
+bucket = sys.argv[3]
+augmented = audience_data.replace('.csv', '-dazzler.xlsx')
+viewers = pd.read_csv(audience_data, header=0, index_col=2, dtype={'a': str, 'b': str, 'c': object, 'd': np.float64, 'e': np.float64}, parse_dates=True)
+viewers['start'] = pd.to_datetime(viewers.index).tz_localize('Europe/London')
+# viewers['end'] = viewers['start'] + pd.to_timedelta(viewers['AV Session - Playback time'], unit='ms')
+viewers['end'] = viewers['start'] + pd.to_timedelta(viewers['AV - Playback time'], unit='ms')
+s = viewers['start'].min()
+e = viewers['start'].max()
+sd = s.date().isoformat()
+ed = e.date().isoformat()
+print(f'stats from {sd} to {ed}')
+r=pd.date_range(sd, ed)
+with pd.ExcelWriter(augmented) as writer:
+    l = []
     for d in r:
-        day = d.isoformat().split('T')[0]
-        x = f'{day} 00:00:00.1'
-        stats=viewers[x][1:]
-        sched = get_day(day)
-        sheet = merge(day, sched, stats)
-        sheet.to_excel(writer, sheet_name=day, index=False)
+        day = d.date().isoformat()
+        data = get_planned(bucket, sid, day)
+        sched = pd.DataFrame.from_records(data, index='start')
+        sched.index = pd.to_datetime(sched.index)
+        sched['start'] = sched.index
+        sched['end'] = pd.to_datetime(sched['end'])
+        viewsonday = viewers.loc[day]
+        for index, row in viewsonday.iterrows():
+            views = addpids(row, sched).tz_convert('Europe/London').tz_localize(None)
+            l.append(views)
+    sheet = pd.concat(l)
+    sheet = sheet[['User ID', 'epid', 'title']]
+    sheet.to_excel(writer, sheet_name=f'{sd}-{ed}', index=True)
