@@ -7,7 +7,8 @@ def mapitem(item):
         'title': item['title'],
         'end': item['end'],
         'vpid': item.get('version', {})['pid'],
-        'epid': item.get('version_of', {})['pid'],
+        'pid': item.get('version_of', {})['pid'],
+        'duration': item.get('version', {})['duration'],
     }
 
 def get_planned(bucket, sid, day):
