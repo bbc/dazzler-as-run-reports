@@ -35,27 +35,33 @@ def watched(audience_row, schedule):
     wanted['Session End'] = audience_row['end'].tz_localize(None)
     return wanted
 
+def getscheduleforsessions(sessions, bucket, sid):
+    first = sessions.index.tz_convert('UTC').min().date()
+    last = sessions['end'].array.tz_convert('UTC').max().date()
+    r = pd.date_range(first, last)
+    s = []
+    for d in r:
+        day = d.date().isoformat()
+        data = get_planned(bucket, sid, day)
+        s = s + data
+    sched = pd.DataFrame.from_records(s)
+    sched.index = pd.to_datetime(sched['start'])
+    sched['d'] = pd.to_timedelta(sched['duration'])
+    sched['e'] = pd.to_datetime(sched['end'])
+    return sched
+
+def getaudiencedata(filename):
+    viewers = pd.read_csv(filename, header=0, index_col=2, dtype={'a': str, 'b': str, 'c': object, 'd': np.float64, 'e': np.int32, 'f': np.float64}, parse_dates=True)
+    viewers.index = viewers.index.tz_localize('Europe/London')
+    viewers['start'] = viewers.index
+    viewers['end'] = viewers.index + pd.to_timedelta(viewers['AV - Playback time'], unit='ms')
+    return viewers
+
 audience_data = sys.argv[1]
 sid = sys.argv[2]
 bucket = sys.argv[3]
-viewers = pd.read_csv(audience_data, header=0, index_col=2, dtype={'a': str, 'b': str, 'c': object, 'd': np.float64, 'e': np.int32, 'f': np.float64}, parse_dates=True)
-viewers.index = viewers.index.tz_localize('Europe/London')
-viewers['start'] = viewers.index
-viewers['end'] = viewers.index + pd.to_timedelta(viewers['AV - Playback time'], unit='ms')
-first = viewers.index.tz_convert('UTC').min().date()
-last = viewers['end'].array.tz_convert('UTC').max().date()
-r = pd.date_range(first, last)
-s = []
-for d in r:
-    day = d.date().isoformat()
-    data = get_planned(bucket, sid, day)
-    print(f'fetched {len(data)} rows from schedule for UTC day {day}')
-    s = s + data
-print(f'got {len(s)} schedule items')
-sched = pd.DataFrame.from_records(s)
-sched.index = pd.to_datetime(sched['start'])
-sched['d'] = pd.to_timedelta(sched['duration'])
-sched['e'] = pd.to_datetime(sched['end'])
+viewers = getaudiencedata(audience_data)
+sched = getscheduleforsessions(viewers, bucket, sid)
 with pd.ExcelWriter(audience_data.replace('.csv', '-dazzler.xlsx')) as writer:
     n = 0
     for d in pd.date_range(viewers.index.min(), viewers.index.max()):
