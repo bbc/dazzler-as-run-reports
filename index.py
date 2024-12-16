@@ -66,8 +66,8 @@ def get_simple_as_run_report(region, start, end):
 def lambda_handler(event, context):
     time = event["time"]
     dt = datetime.fromisoformat(time)
-    start = datetime.combine(dt.date(), datetime.min.time())
-    end = start + timedelta(hours=24)
+    end = datetime.combine(dt.date(), datetime.min.time())
+    start = end - timedelta(hours=24)
     region = event['region']
     print(region, start, end)
     df = pd.DataFrame(get_simple_as_run_report(region, start, end))
