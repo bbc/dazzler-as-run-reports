@@ -1,0 +1,65 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Serverless Application Model template describing your function.
+Parameters:
+  Environment:
+    Type: String
+    Description: The deployment environment
+    AllowedValues:
+      - live
+      - test
+  LambdaTimeout:
+    Default: '30'
+    Type: Number
+    Description: >-
+      The function execution time (in seconds) after which Lambda terminates the
+      function. 
+  LambdaMemorySize:
+    Default: '128'
+    Type: Number
+    Description: 'The amount of memory, in MB, that is allocated to your Lambda function.'
+Resources:
+  saveasruns:
+    Type: AWS::Serverless::Function
+    FunctionName: !Sub ${Environment}-saveasruns    
+    Properties:
+      InlineCode: |
+        def lambda_handler(event, context):
+          pass      
+      Description: ''
+      MemorySize: 128
+      Timeout: 300
+      Handler: index.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - arm64
+      EphemeralStorage:
+        Size: 512
+      EventInvokeConfig:
+        MaximumEventAgeInSeconds: 21600
+        MaximumRetryAttempts: 2
+      Layers:
+        - !Sub arn:aws:lambda:${AWS::Region}:336392948345:layer:AWSSDKPandas-Python312-Arm64:15
+      PackageType: Zip
+      Policies:
+          - S3CrudPolicy:
+              BucketName: iplayer-dazzler-asruns
+          - FilterLogEventsPolicy:
+              LogGroupName: ElementalMediaLive
+          - Statement:
+            - Action: medialive:ListChannels
+              Effect: Allow
+              Resource: "*"
+      RecursiveLoop: Terminate
+      Events:
+        Schedule1:
+          Type: Schedule
+          Properties:
+            Schedule: cron(5 0 ? * * *)
+
+  AliasForLambda:
+    Type: 'AWS::Lambda::Alias'
+    Properties:
+      FunctionVersion: $LATEST
+      FunctionName: !Ref saveasruns
+      Name: !Ref Environment
