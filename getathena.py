@@ -33,12 +33,14 @@ def get_data(date):
     response_iterator = paginator.paginate(QueryExecutionId=qeid)
     for page in response_iterator:
         for row in page['ResultSet']['Rows']:
-            yield [f.get('VarCharValue', '') for f in row['Data']]
+            r = [f.get('VarCharValue', '') for f in row['Data']]
+            if r[3].isdigit():
+                yield r
 
 if __name__ == '__main__':
     date = sys.argv[1]
     l = [r for r in get_data(date)]
-    l = [r for r in l if r[3].isdigit()]
+    # l = [r for r in l if r[3].isdigit()]
     # print(json.dumps(l))
     df = pd.DataFrame(l, columns=['channel_pid', 'audience_id', 'event_start_datetime_ms', 'playback_time'])
     # df['event_start_datetime_ms'] = df['event_start_datetime_ms'].astype('timestamp64[ns]')

@@ -52,6 +52,7 @@ def get_simple_as_run_report(region, start, end):
         else:
             print('ignoring', channel['name'])
             continue
+        print(iplayervpid)
         response_iterator = get_as_run(region, lsn, start, end)
         for line in gen(response_iterator):
             if 'channel_arn' in line:
