@@ -50,7 +50,7 @@ def test_get_simple_as_run_report_not_empty(mock_get_as_run):
     message = {'action_name': '20231201000000 PT1M sched avpid'}
     event = {'channel_arn':'','timestamp':'T','message': json.dumps(message)}
     mock_get_as_run.return_value=[{'events': [{'message': json.dumps(event)}]}]
-    assert [c for c in get_simple_as_run_report(region, [{'arn':':::::::', 'vpid': '', 'name': ''}], start, end)] == [{'name': '', 'start': 'T', 'duration': 'PT1M', 'channel_vpid': '', 'item_vpid': 'avpid'}]
+    assert [c for c in get_simple_as_run_report(region, [{'arn':':::::::', 'vpid': '', 'name': ''}], start, end)] == [{'name': '', 'start': 'TZ', 'duration': 'PT1M', 'channel_vpid': '', 'item_vpid': 'avpid'}]
 
 def test_make_one_second_data_for_channel(snapshot): 
     input = df[df['channel_vpid']=='cv1']
