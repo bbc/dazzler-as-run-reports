@@ -54,12 +54,10 @@ def get_simple_as_run_report(region, channels, start, end):
         response_iterator = get_as_run(region, lsn, start, end)
         for line in gen(response_iterator):
             if 'channel_arn' in line:
-                print('LLL', line)
                 arn = line['channel_arn']
                 message = json.loads(line['message'])
-                print('XXXXX', message)
                 action = message['action_name']
-                ts = line['timestamp']
+                ts = f"{line['timestamp']}Z"
                 planned, duration, source, vpid = action.split(' ')
                 yield {'name': name, 'start': ts, 'duration': duration, 'channel_vpid': iplayervpid, 'item_vpid': vpid}
 
@@ -90,14 +88,14 @@ def make_one_second_data(channels, start, end, df):
 
 def main(time, region):
     dt = datetime.fromisoformat(time)
-    end = datetime.combine(dt.date(), datetime.min.time())
+    end = dt.replace(hour=0,minute=0,second=0,microsecond=0)
     start = end - timedelta(hours=24)
     print(region, start, end)
     channels = get_channels(region)
     print(json.dumps(channels))
     df = pd.DataFrame(get_simple_as_run_report(region, channels, start, end))
     df2=df.astype(
-        {'name': 'string', 'start': 'datetime64[ns]', 'duration': 'timedelta64[ns]', 'channel_vpid': 'string', 'item_vpid': 'string'}
+        {'name': 'string', 'start': 'datetime64[ns, UTC]', 'duration': 'timedelta64[ns]', 'channel_vpid': 'string', 'item_vpid': 'string'}
     )
     e = pd.to_datetime(end).tz_convert('Europe/London')
     s = pd.to_datetime(start).tz_convert('Europe/London')
