@@ -33,7 +33,7 @@ def test_cmap():
 
 @mock_aws
 def test_get_as_run(): 
-    assert get_as_run(region, 'aaa', start, end) is not None
+    assert get_as_run(region, start, end) is not None
 
 @mock_aws
 def test_get_channels(): 
@@ -47,8 +47,8 @@ def test_get_simple_as_run_report_empty(mock_get_as_run):
 
 @patch('index.get_as_run')
 def test_get_simple_as_run_report_not_empty(mock_get_as_run): 
-    message = {'action_name': '20231201000000 PT1M sched avpid'}
-    event = {'channel_arn':'','timestamp':'T','message': json.dumps(message)}
+    message = {'input_id': 'a dynamic', 'action_name': '20231201000000 PT1M sched avpid'}
+    event = {'name': 'a', 'encoder_pipeline': 0, 'channel_arn':'','timestamp':'T','message': json.dumps(message)}
     mock_get_as_run.return_value=[{'events': [{'message': json.dumps(event)}]}]
     assert [c for c in get_simple_as_run_report(region, [{'arn':':::::::', 'vpid': '', 'name': ''}], start, end)] == [{'name': '', 'start': 'TZ', 'duration': 'PT1M', 'channel_vpid': '', 'item_vpid': 'avpid'}]
 
