@@ -83,20 +83,25 @@ def make_one_second_data(channels, start, end, df):
     for channel in channels:
         cd.append(make_one_second_data_for_channel(df.loc[df['channel_vpid']==channel['vpid']], start, end))
     df = pd.concat(cd).dropna()
+    df = df.tz_convert('Europe/London')
+    df = df.tz_localize(tz=None)
     return df.reset_index(names=['start'])
+
+def save_one_second_data(region, channels, start, end, df2):
+    e = pd.to_datetime(end).tz_convert('Europe/London')
+    s = pd.to_datetime(start).tz_convert('Europe/London')
+    df3 = make_one_second_data(channels, s, e, df2)
+    save_parquet(df3, f'by_the_second/parquet/{region}_{start.date().isoformat()}')
+    save_csv(df3, f'by_the_second/csv/{region}_{start.date().isoformat()}')
 
 def report(region, channels, start, end, df):
     df2=df.astype(
         {'name': 'string', 'start': 'datetime64[ns, UTC]', 'duration': 'timedelta64[ns]', 'channel_vpid': 'string', 'item_vpid': 'string'}
     )
-    e = pd.to_datetime(end).tz_convert('Europe/London')
-    s = pd.to_datetime(start).tz_convert('Europe/London')
-    df3 = make_one_second_data(channels, s, e, df2)
     save_parquet(df2, f'daily/{region}_{start.date().isoformat()}')
     save_csv(df2, f'daily_csv/{region}_{start.date().isoformat()}')
-    save_parquet(df3, f'by_the_second/parquet/{region}/{start.date().isoformat()}')
-    save_csv(df3, f'by_the_second/csv/{region}/{start.date().isoformat()}')
-    
+    save_one_second_data(region, channels, start, end, df2)
+
 def main(time, region):
     dt = datetime.fromisoformat(time)
     end = dt.replace(hour=0,minute=0,second=0,microsecond=0)
